@@ -4,7 +4,7 @@ console.log(x * 2);
 
 export function createPerson (
     firstName: string,
-    LastName?: string,
+    lastName?: string,
     ): {
   firstName: string;
   lastName?: string;
@@ -24,4 +24,11 @@ return null;
 const squareOfTwoNumber = squareOf(2);
 const squareOfTwoString = squareOf(2);
 
-if (squareOfTwoNumber)
+
+
+if (squareOfTwoString === null) {
+    console.log('conta inválida');
+} else {
+    console.log(squareOfTwoString);
+}
+
