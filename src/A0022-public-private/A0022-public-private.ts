@@ -1,5 +1,5 @@
 export class Empresa {
-    public readonly nome: string; // public não  é necessário
+    readonly nome: string; // public não  é necessário
     private readonly colaboradores: Colaborador[] = [];
     protected readonly cnpj: string;
 
