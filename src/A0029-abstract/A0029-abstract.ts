@@ -7,19 +7,21 @@ export abstract class Personagem {
         protected vida: number,
     ) {}
 
-atacar(personagem: Personagem): void {
-    this.bordao();
-    personagem.perderVida(this.ataque);
+    atacar(personagem: Personagem): void {
+        this.bordao();
+        personagem.perderVida(this.ataque);
+        }
+
+    perderVida(forcaAtaque: number): void {
+        this.vida -= forcaAtaque;
+    `${this.emoji} - ${this.nome} agora tem ${this.vida} de vida...`;
     }
 
-perderVida(forcaAtaque: number): void {
-    this.vida -= forcaAtaque;
-  `${this.emoji} - ${this.nome} agora tem ${this.vida} de vida...`;
-    };
+
+   abstract bordao(): void;
+
 }
 
-abstract bordao(): void;
-}
 
 export class Guerreira extends Personagem {
     protected emoji = '\u{1F9DD}';
